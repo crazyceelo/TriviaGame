@@ -25,3 +25,71 @@ On the final screen, show the number of
 correct answers, incorrect answers, and an 
 option to restart the game 
 (without reloading the page).
+*/
+
+$(document).ready(function()
+{
+	var q1 = 
+	{
+		"question" : "question 1", 
+		"answer1" : "answer 1", 
+		"answer2" : "answer 2",
+		"answer3" : "answer 3",
+		"answer4" : "answer 4"
+	};
+
+	console.log(q1.question);
+	console.log(q1.answer1);
+	console.log(q1.answer2);
+	console.log(q1.answer3);
+	console.log(q1.answer4);
+
+var q2 = 
+	{
+		"question" : "question 2", 
+		"answer1" : "answer 1", 
+		"answer2" : "answer 2",
+		"answer3" : "answer 3",
+		"answer4" : "answer 4"
+	};
+
+var q3 = 
+	{
+		"question" : "question 3", 
+		"answer1" : "answer 1", 
+		"answer2" : "answer 2",
+		"answer3" : "answer 3",
+		"answer4" : "answer 4"
+	};
+
+var q4 = 
+	{
+		"question" : "question 4", 
+		"answer1" : "answer 1", 
+		"answer2" : "answer 2",
+		"answer3" : "answer 3",
+		"answer4" : "answer 4"
+	};
+
+var questionCounter = 30;
+var answerCounter = 5;
+
+	function startGame()
+	{
+		$("#question").text(q1.question);
+		$("#opt1").text(q1.answer1);
+		$("#opt2").text(q1.answer2);
+		$("#opt3").text(q1.answer3);
+		$("#opt4").text(q1.answer4);
+		setTimeout($("#seconds").text(questionCounter);
+		
+	}
+
+	function runGame(){
+
+	}
+
+	startGame();
+})
+
+//objects
