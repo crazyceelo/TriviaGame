@@ -132,6 +132,7 @@ var timer =
 			$("#question").replaceWith('<img src="http://i938.photobucket.com/albums/ad230/JoeTEStrikesBack/th_TimeUp.gif" alt="Wrong Answer" height="200" width="200">');
 
 			clearInterval(interval1);
+			timer.answer = 6;
 			// stop counting down.
 			answerCountDown();
 		}
