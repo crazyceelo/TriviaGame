@@ -61,12 +61,15 @@ $(document).ready(function()
 
 			if ($(this).attr("data-value") == "correct") 
 			{
+				correctAnswers++;
 				alert("correct");
+				// correctDecrement()
 			}
 
 			else if ($(this).attr("data-value") == "incorrect")
 			{
-				alert("incorrect");
+				incorrectAnswers++;
+				// incorrectDecrement()
 			}
 		})
 		$("#seconds").html(timer.question);
