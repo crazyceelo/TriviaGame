@@ -112,5 +112,23 @@ $(document).ready(function()
 	setTimeout(function(){countDown(questionDecrement)}, 111200);
 	setTimeout(function(){countDown(answerDecrement)}, 142000);
 
+// need to add times up notification
+// need to add correct answer logic
+	// if correct answer
+		// show correct gif 5 seconds
+		// go to questionSet(x)
+		// need to add correct answers counter
+// need to add incorrect answer logic
+	// if correct answer
+		// show correct gif 5 seconds
+		// go to questionSet(x)
+		// need to add incorrect answer counter
+// need to add end page
+	// correct answers
+	// incorrect answers
+// need to add start button
+// need to add question randomizer
+
+
 })
 
