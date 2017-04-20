@@ -90,12 +90,24 @@ $(document).ready(function()
 
 	function answerDecrement()
 	{
+		// remove opt1, opt2, opt3, opt4
+		$(".answer").remove();
+
+		// replace question div with out of time message
+		$("#question").before("<h4 id='correction'>correct answer is: "+ q1.answer1 +"</h4>");
+		$("#question").replaceWith('<img id="image" src="http://i938.photobucket.com/albums/ad230/JoeTEStrikesBack/th_TimeUp.gif" alt="Wrong Answer" height="200" width="200">');
 		timer.answer--;
 		$("#seconds").html(timer.answer);
 		if (timer.answer === 0) 
 		{
 			clearInterval(interval);
 			timer.answer = 6;
+			$("#correction").remove();
+			$("#image").replaceWith('<h3 id="question"></h3>');
+			$(".answer1-col").append('<h2 id="opt1" class="answer"></h2>');
+			$(".answer2-col").append('<h2 id="opt2" class="answer"></h2>');
+			$(".answer3-col").append('<h2 id="opt3" class="answer"></h2>');
+			$(".answer4-col").append('<h2 id="opt4" class="answer"></h2>');
 		}
 	}
 
@@ -112,7 +124,7 @@ $(document).ready(function()
 	setTimeout(function(){countDown(questionDecrement)}, 111200);
 	setTimeout(function(){countDown(answerDecrement)}, 142000);
 
-// need to add times up notification
+//////////////////////////////// need to add times up notification
 // need to add correct answer logic
 	// if correct answer
 		// show correct gif 5 seconds
