@@ -63,7 +63,7 @@ $(document).ready(function()
 			{
 				correctAnswers++;
 				alert("correct");
-				// correctDecrement()
+				// correctDecrement(z)
 			}
 
 			else if ($(this).attr("data-value") == "incorrect")
@@ -117,6 +117,8 @@ $(document).ready(function()
 	questionSet(q1);
 	setTimeout(function(){countDown(questionDecrement)}, 0);
 	setTimeout(function(){countDown(answerDecrement)}, 30100);
+	// correct decrement
+	// incorrect decrement
 	setTimeout(function(){questionSet(q2)}, 37000);
 	setTimeout(function(){countDown(questionDecrement)}, 37000);
 	setTimeout(function(){countDown(answerDecrement)}, 67100);
