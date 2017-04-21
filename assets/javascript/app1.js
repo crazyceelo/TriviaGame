@@ -39,6 +39,7 @@ $(document).ready(function()
 	var correctAnswers = 0;
 	var incorrectAnswers = 0;
 	var interval;
+	var timeOut;
 	var timer = 
 	{
 		"question" : 30,
@@ -69,11 +70,18 @@ $(document).ready(function()
 			else if ($(this).attr("data-value") == "incorrect")
 			{
 				incorrectAnswers++;
-				countDown(incorrectDecrement);
+				clearInterval(interval);
+				// timer.question = 0;
+				// countDown(incorrectDecrement);
 				// incorrectDecrement()
 			}
 		})
 		$("#seconds").html(timer.question);
+	}
+
+	function myStopFunction(x)
+	{
+		clearTimeout(x);
 	}
 
 	function countDown(x)
@@ -112,6 +120,7 @@ $(document).ready(function()
 			$(".answer2-col").append('<h2 id="opt2" class="answer"></h2>');
 			$(".answer3-col").append('<h2 id="opt3" class="answer"></h2>');
 			$(".answer4-col").append('<h2 id="opt4" class="answer"></h2>');
+
 		}
 	}
 
@@ -141,6 +150,7 @@ $(document).ready(function()
 	questionSet(q1);
 	setTimeout(function(){countDown(questionDecrement)}, 0);
 	setTimeout(function(){countDown(answerDecrement)}, 30100);
+	// setTimeout(function(){countDown(incorrectDecrement)}, 30100);
 	// correct decrement
 	// incorrect decrement
 	setTimeout(function(){questionSet(q2)}, 37000);
@@ -169,6 +179,22 @@ $(document).ready(function()
 	// incorrect answers
 // need to add start button
 // need to add question randomizer
+//----------------------------------
+// timer for each question set.
+	// q1 setTimer 35
+		//if correct
+			//correct gif
+			//clearInterval
+			//go to question 2
+		//else if incorrect
+			//incorrect gif
+			//clearInterval
+			//go to question 2
+		//else timer 30
+			//times up gif
+			//clearInterval
+			//go to question 2
+
 
 
 })
